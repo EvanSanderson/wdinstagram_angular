@@ -16,6 +16,11 @@
       templateUrl: "js/index.html",
       controller: "WdinstagramIndexController",
       controllerAs: "WdinstagramIndexViewModel"
+    }).state("wdinstagramShow", {
+      url: "/wdinstagram/:id",
+      templateUrl: "js/show.html",
+      controller: "WdinstagramShowController",
+      controllerAs: "WdinstagramShowViewModel"
     });
   }
 

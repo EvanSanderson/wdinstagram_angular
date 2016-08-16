@@ -1,7 +1,7 @@
 <h1> All the Grams </h1>
 
 <div data-ng-repeat="gram in WdinstagramIndexViewModel.grams">
-  <h1> Author: {{gram.author}} </h1>
+  <h1><a data-ui-sref="wdinstagramShow({id: gram.id})"> Author: {{gram.author}} </a></h1>
   <p> Body: {{gram.body}} </p>
   <img src="{{gram.photo_url}}">
 </div>
