@@ -2,7 +2,8 @@
 
 (function(){
   angular.module("wdinstagram", [
-    "ui.router"
+    "ui.router",
+    "grams"
   ])
   .config([
     "$stateProvider",

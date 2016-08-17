@@ -2,13 +2,14 @@
 
 (function(){
   angular
-    .module( "wdinstagram" )
+    .module( "grams" )
     .controller("WdinstagramIndexController", [
+      "GramFactory",
       WdinstagramIndexControllerFunction
     ]);
 
-    function WdinstagramIndexControllerFunction(){
-      this.grams = grams
+    function WdinstagramIndexControllerFunction( GramFactory ){
+      this.grams = GramFactory.query();
     }
 
 }());
