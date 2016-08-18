@@ -9,7 +9,9 @@
     ]);
 
     function GramFactoryFunction( $resource ){
-      return $resource( "http://localhost:3000/entries/:id" );
+      return $resource( "http://localhost:3000/entries/:id", {}, {
+        update: { method: "PUT" }
+      });
     }
 
 })()

@@ -5,12 +5,13 @@
     .module( "grams")
     .controller( "WdinstagramShowController", [
       "$stateParams",
+      "GramFactory",
       WdinstagramShowControllerFunction
     ]);
 
-    function WdinstagramShowControllerFunction($stateParams){
-      console.log("working")
-      this.gram = grams[$stateParams.id]
+    function WdinstagramShowControllerFunction($stateParams, GramFactory){
+
+      this.gram = GramFactory.get({id: $stateParams.id});
     }
 
 }())
